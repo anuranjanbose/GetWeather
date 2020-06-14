@@ -16,6 +16,8 @@
 		7DB2346D249611860034C920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB2346C249611860034C920 /* Assets.xcassets */; };
 		7DB23470249611860034C920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB2346E249611860034C920 /* LaunchScreen.storyboard */; };
 		7DBD9A31249617B5004F70B6 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD9A30249617B5004F70B6 /* URLRequest+Extensions.swift */; };
+		7DBD9A3324961CD5004F70B6 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD9A3224961CD5004F70B6 /* URL+Extensions.swift */; };
+		7DBD9A3624961DE6004F70B6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD9A3524961DE6004F70B6 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		7DB2346F249611860034C920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DB23471249611860034C920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DBD9A30249617B5004F70B6 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		7DBD9A3224961CD5004F70B6 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		7DBD9A3524961DE6004F70B6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A4461A24D1E79EDD29DC805D /* Pods_GetWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE65FD928DD165909A956E86 /* Pods-GetWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWeather.debug.xcconfig"; path = "Target Support Files/Pods-GetWeather/Pods-GetWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,11 +88,11 @@
 		7DB23462249611850034C920 /* GetWeather */ = {
 			isa = PBXGroup;
 			children = (
+				7DBD9A3424961DCF004F70B6 /* Controllers */,
 				7DBD9A2F2496179C004F70B6 /* Extensions */,
 				7D2E619824961564004FF14D /* Models */,
 				7DB23463249611850034C920 /* AppDelegate.swift */,
 				7DB23465249611850034C920 /* SceneDelegate.swift */,
-				7DB23467249611850034C920 /* ViewController.swift */,
 				7DB23469249611850034C920 /* Main.storyboard */,
 				7DB2346C249611860034C920 /* Assets.xcassets */,
 				7DB2346E249611860034C920 /* LaunchScreen.storyboard */,
@@ -101,8 +105,18 @@
 			isa = PBXGroup;
 			children = (
 				7DBD9A30249617B5004F70B6 /* URLRequest+Extensions.swift */,
+				7DBD9A3224961CD5004F70B6 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DBD9A3424961DCF004F70B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DB23467249611850034C920 /* ViewController.swift */,
+				7DBD9A3524961DE6004F70B6 /* DataController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D310C9BB08A5651FA435DB0E /* Frameworks */ = {
@@ -228,7 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DBD9A3624961DE6004F70B6 /* DataController.swift in Sources */,
 				7DB23468249611850034C920 /* ViewController.swift in Sources */,
+				7DBD9A3324961CD5004F70B6 /* URL+Extensions.swift in Sources */,
 				7D2E619A2496157B004FF14D /* WeatherResult.swift in Sources */,
 				7DB23464249611850034C920 /* AppDelegate.swift in Sources */,
 				7DBD9A31249617B5004F70B6 /* URLRequest+Extensions.swift in Sources */,
