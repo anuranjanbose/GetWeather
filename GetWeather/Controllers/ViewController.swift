@@ -25,6 +25,21 @@ class ViewController: UIViewController, DataController {
     }
     
     private func bindTextField() {
+        
+        self.cityNameTextField.rx.controlEvent(.editingDidEndOnExit)
+            .asObservable()
+            .map { self.cityNameTextField.text }
+            .subscribe(onNext: { city in
+                if let city = city {
+                    if city.isEmpty {
+                        self.displayWeather(nil)
+                    } else {
+                        self.getWeather(for: city)
+                    }
+                }
+            }).disposed(by: disposeBag)
+        
+        /*
         self.cityNameTextField.rx.value
             .subscribe(onNext: { city in
                 if let city = city {
@@ -35,6 +50,7 @@ class ViewController: UIViewController, DataController {
                     }
                 }
             }).disposed(by: disposeBag)
+        */
     }
     
     private func getWeather(for city: String) {
