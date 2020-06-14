@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2E619A2496157B004FF14D /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E61992496157B004FF14D /* WeatherResult.swift */; };
 		7DB23464249611850034C920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB23463249611850034C920 /* AppDelegate.swift */; };
 		7DB23466249611850034C920 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB23465249611850034C920 /* SceneDelegate.swift */; };
 		7DB23468249611850034C920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB23467249611850034C920 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D2E61992496157B004FF14D /* WeatherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
 		7DB23460249611850034C920 /* GetWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB23463249611850034C920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB23465249611850034C920 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2E619824961564004FF14D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D2E61992496157B004FF14D /* WeatherResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7DB23457249611850034C920 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		7DB23462249611850034C920 /* GetWeather */ = {
 			isa = PBXGroup;
 			children = (
+				7D2E619824961564004FF14D /* Models */,
 				7DB23463249611850034C920 /* AppDelegate.swift */,
 				7DB23465249611850034C920 /* SceneDelegate.swift */,
 				7DB23467249611850034C920 /* ViewController.swift */,
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DB23468249611850034C920 /* ViewController.swift in Sources */,
+				7D2E619A2496157B004FF14D /* WeatherResult.swift in Sources */,
 				7DB23464249611850034C920 /* AppDelegate.swift in Sources */,
 				7DB23466249611850034C920 /* SceneDelegate.swift in Sources */,
 			);
