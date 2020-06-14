@@ -72,6 +72,8 @@ class ViewController: UIViewController, DataController {
         .disposed(by: disposeBag)
         */
         
+        /// Using Binding
+        /*
         let search = URLRequest.load(resource: resource)
             .observeOn(MainScheduler.instance)
             .catchErrorJustReturn(WeatherResult.empty)
@@ -83,6 +85,20 @@ class ViewController: UIViewController, DataController {
         
         search.map { "\($0.weather.humidity) 💦"}
             .bind(to: self.humidityLabel.rx.text)
+            .disposed(by: disposeBag)
+         */
+        /// Using Driver
+        
+        let search = URLRequest.load(resource: resource)
+            .observeOn(MainScheduler.instance)
+            .asDriver(onErrorJustReturn: WeatherResult.empty)
+        
+        search.map { "\($0.weather.temperature) ℉" }
+            .drive(self.temperatureLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        search.map { "\($0.weather.humidity) 💦" }
+            .drive(self.humidityLabel.rx.text)
             .disposed(by: disposeBag)
     }
 
