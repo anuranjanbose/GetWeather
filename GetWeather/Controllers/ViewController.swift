@@ -61,6 +61,7 @@ class ViewController: UIViewController, DataController {
         
         let resource = Resource<WeatherResult>(url: url)
         
+        /* before
         URLRequest.load(resource: resource)
             .observeOn(MainScheduler.instance)
             .catchErrorJustReturn(WeatherResult.empty)
@@ -69,6 +70,20 @@ class ViewController: UIViewController, DataController {
                 self.displayWeather(weather)
             })
         .disposed(by: disposeBag)
+        */
+        
+        let search = URLRequest.load(resource: resource)
+            .observeOn(MainScheduler.instance)
+            .catchErrorJustReturn(WeatherResult.empty)
+        
+        /// Bind the search to text fields
+        search.map { "\($0.weather.temperature) ℉"}
+            .bind(to: self.temperatureLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        search.map { "\($0.weather.humidity) 💦"}
+            .bind(to: self.humidityLabel.rx.text)
+            .disposed(by: disposeBag)
     }
 
     private func displayWeather(_ weather: Weather?) {
